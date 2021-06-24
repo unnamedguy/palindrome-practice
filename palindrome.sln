@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "palindrome", "palindrome\palindrome.vcxproj", "{426CBE51-8DB3-4A35-BAB1-A82E30E4785B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEST_palindrome", "TEST_palindrome\TEST_palindrome.vcxproj", "{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{426CBE51-8DB3-4A35-BAB1-A82E30E4785B}.Release|x64.Build.0 = Release|x64
 		{426CBE51-8DB3-4A35-BAB1-A82E30E4785B}.Release|x86.ActiveCfg = Release|Win32
 		{426CBE51-8DB3-4A35-BAB1-A82E30E4785B}.Release|x86.Build.0 = Release|Win32
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Debug|x64.ActiveCfg = Debug|x64
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Debug|x64.Build.0 = Debug|x64
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Debug|x86.ActiveCfg = Debug|Win32
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Debug|x86.Build.0 = Debug|Win32
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Release|x64.ActiveCfg = Release|x64
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Release|x64.Build.0 = Release|x64
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Release|x86.ActiveCfg = Release|Win32
+		{7A416540-17D5-4B57-ACEC-AFD5F9B990DB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
