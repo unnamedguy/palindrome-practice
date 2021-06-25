@@ -2,18 +2,7 @@
 #include <fstream>
 #include <filesystem>
 
-std::string streamFile(std::string str)
-{
-	std::ofstream out("..\\test11.txt");
-	//std::string dsa = std::filesystem::absolute(".").generic_u8string();
-	out << str;
-	out.close();
-	system("..\\x64\\Debug\\palindrome.exe");
-	std::ifstream in("..\\out.txt");
-	in >> str;
-	in.close();
-	return str;
-}
+std::string streamFile(std::string);
 
 bool test1();
 bool test2();
@@ -55,22 +44,38 @@ int main()
 
 bool test1() //нечет - общее кол-во символов, нечет - конкретной буквы
 {
-	return streamFile("ASDZXCQWEVVV") == "aaddssassddaa";
+	return streamFile("ASDZXCQWEVVV") == "VAV";
 }
 
 bool test2() // чет, нечет
 {
-	return streamFile("ASDZXVCVDFGV") == "aaddssassddaa";
+	return streamFile("ASDZXVCVDFGV") == "DVAVD";
 }
+
 bool test3() // чет, чет
 {
-	return streamFile("asdasdasdasd") == "aaddssssddaa";
+	return streamFile("AAEDEDFGFG") == "ADEFGGFEDA";
 }
+
 bool test4() //
 {
-	return streamFile("POLLLINDROM") == "aaddssassddaa";
+	return streamFile("POLLLINDROM") == "LODOL";
 }
+
 bool test5() //
 {
-	return streamFile("asdasdasdasda") == "aaddssassddaa";
+	return streamFile("ASDASDASDASDASDZSDZSDZSDZSDZSDZSFFEFEFEFEFQEFSEFSDFGDFHGDFHHD") == "AADDDDDDDEEEFFFFFGHSSSSSSZZZAZZZSSSSSSHGFFFFFEEEDDDDDDDAA";
+}
+
+std::string streamFile(std::string str)
+{
+	std::ofstream out("..\\test11.txt");
+	//std::string dsa = std::filesystem::absolute(".").generic_u8string();
+	out << str;
+	out.close();
+	system("..\\x64\\Debug\\palindrome.exe");
+	std::ifstream in("..\\out.txt");
+	in >> str;
+	in.close();
+	return str;
 }
