@@ -16,19 +16,21 @@ int main()
     map<char, uint32_t> letters;
     int n;
     string str = "";
+    char defInputPath[] = "..\\test11.txt";
+    char defOutputPath[] = "..\\out.txt";
 
     
-    n = fs::file_size("E:\\Projects\\Pract\\test11.txt");
+    n = fs::file_size(defInputPath);
 
     if (n == 0 && n > 100000)
     {
-        ofstream out("E:\\Projects\\Pract\\out.txt", ios::trunc);
+        ofstream out(defOutputPath, ios::trunc);
         out.close();
         return 0;
     }
 
     char* masCh = new char[n + 1];
-    ifstream myin("E:\\Projects\\Pract\\test11.txt");
+    ifstream myin(defInputPath);
     if (myin.is_open())
     {
         myin >> masCh;
@@ -39,7 +41,7 @@ int main()
 
     if (!checkWord(masCh, n))
     {
-        ofstream out("E:\\Projects\\Pract\\out.txt", ios::trunc);
+        ofstream out(defOutputPath, ios::trunc);
         out.close();
         return 0;
     }
@@ -90,7 +92,7 @@ int main()
             str += str[i];
     }
 
-    ofstream out("E:\\Projects\\Pract\\out.txt");
+    ofstream out(defOutputPath);
     out << str;
     out.close();
 }
